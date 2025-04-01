@@ -1,14 +1,3 @@
-from app.rag_pipeline import run_rag_pipeline
-
-if __name__ == "__main__":
-    print("\nWelcome to Improved RAG Reasoning Lab 🧠")
-    question = input("\nAsk a question about your data: ")
-    response = run_rag_pipeline(question)
-    print("\n---\nAnswer:")
-    print(response)
-
-
-### app/data_loader.py
 import pandas as pd
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.document_loaders import CSVLoader
@@ -16,11 +5,16 @@ from langchain.schema.document import Document
 import os
 
 def load_csv_as_documents(filepath: str) -> list[Document]:
-    if not os.path.exists(filepath):
-        raise FileNotFoundError(f"File not found: {filepath}")
+    try:
+        df = pd.read_csv(filepath, encoding="utf-8")
+    except UnicodeDecodeError:
+        df = pd.read_csv(filepath, encoding="ISO-8859-1")
 
-    loader = CSVLoader(file_path=filepath)
-    docs = loader.load()
+    docs = []
+    for i, row in df.iterrows():
+        content = "\n".join(f"{col}: {val}" for col, val in row.items())
+        docs.append(Document(page_content=content))
+
     return docs
 
 def split_documents(docs: list[Document], chunk_size=800, chunk_overlap=100) -> list[Document]:
