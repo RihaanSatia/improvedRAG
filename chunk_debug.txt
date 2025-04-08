@@ -1,0 +1,59 @@
+🧩 Top 3 Chunks After Splitting:
+
+--- Chunk 1 ---
+CU_NUMBER: 227
+CU_NAME: PENTAGON
+Quarter: 2024-1
+TOTAL_ASSETS: 34418948071.0
+TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS: 29588555908.0
+NO_OF_MEMBERS: 2885762
+Money Market (Amount): 3157968596
+Number_of_Used_Vehicle_Loans: 221655
+Amount_of_Total_Share_Draft: 2040579715
+Total_number_of_loans_and_leases: 1641333
+Total_amount_of_loans_and_leases: 28081334002.0
+TOTAL_AMOUNT_OF_SHARES: 29290572908.0
+Number_of_new_Vehicle_loans: 66374
+Total_Number_of_money_market_shares: 86326
+Amount_of_Used_Vehicle_Loans: 3538602913
+Number_of_Total_Share_Draft: 472108
+Amount_of_new_vehicle_loans: 1492199874
+Net_Income: 0
+Interest_Income: 465869388
+Interest_Expense: 220609462
+Net_Worth: 3225157508
+Non_Interest_Income: 58646761
+Deliquent Credit card loans (Amount) 0-180: 588128610
+Total_Employees: 3027
+
+--- Chunk 2 ---
+Deliquent Credit card loans (Amount) 0-180: 588128610
+Total_Employees: 3027
+Deliquent Credit card loans (Amount) 180+: 71268968
+
+--- Chunk 3 ---
+CU_NUMBER: 227
+CU_NAME: PENTAGON
+Quarter: 2023-4
+TOTAL_ASSETS: 34823233611.0
+TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS: 29491695072.0
+NO_OF_MEMBERS: 2862415
+Money Market (Amount): 3112603186
+Number_of_Used_Vehicle_Loans: 226191
+Amount_of_Total_Share_Draft: 1998774076
+Total_number_of_loans_and_leases: 1667844
+Total_amount_of_loans_and_leases: 28934875608.0
+TOTAL_AMOUNT_OF_SHARES: 29158242072.0
+Number_of_new_Vehicle_loans: 68780
+Total_Number_of_money_market_shares: 87343
+Amount_of_Used_Vehicle_Loans: 3646269050
+Number_of_Total_Share_Draft: 455959
+Amount_of_new_vehicle_loans: 1559794405
+Net_Income: 0
+Interest_Income: 1828397340
+Interest_Expense: 778687149
+Net_Worth: 3234071422
+Non_Interest_Income: 268966254
+Deliquent Credit card loans (Amount) 0-180: 446171031
+Total_Employees: 3136
+
