@@ -1,5 +1,5 @@
 from typing import List, Dict
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 from langchain.schema import ChatMessage
 from app.prompts import METADATA_PROMPT
 import json
@@ -20,7 +20,7 @@ def infer_table_metadata_from_columns(table_name: str, columns: List[Dict[str, s
     ]
     response = llm(messages)
     content = response.content
-    st.write(content)
+    #st.write(content)
     try:
         json_block = re.findall(r"```json(.*?)```", content, re.DOTALL)[0].strip()
         cleaned = re.sub(r",\s*([}\]])", r"\1", json_block)

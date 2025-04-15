@@ -1,0 +1,45 @@
+Applying conformal prediction to the retrieval process consists of several steps:
+1. We should create a collection of questions that we want our RAG pipeline to answer. This collection will be used for the calibration of the conformal predictor and, therefore, should be large enough and representative of the ultimate questions that users will ask from the RAG pipeline.
+2. Next, we perform the RAG process for each question and examine the retrieved documents. For each question, we will record the cosine distance between the embeddings of the first returned chunk containing the answer to the question and the embeddings of the queried question. We will then sort these recorded distances from the greatest to smallest values. We call this sorted list our calibration data.
+3. When the user asks a new question, we repeat the RAG process to obtain some returned chunks. We then examine the cosine distance between the embeddings of each returned chunk and calculate the certainty of that chunk containing the true answer. This is done by dividing the number of values from the calibration data that are larger than this cosine distance by the total number of values in the calibration data.
+
+
+Please note, to accomplish this, we will require a conformal_filter function. This function accepts all retrieved _chunks for a queried question, the calibration _records, and a user-specified error_rate (between 0 and 1) as inputs, and outputs a list of chunks that will contain the texts) with information to answer the queried question with a probablity > 1 - error_rate.
+def
+conformal_filter( retrieved_chunks, calibration_records, error_rate, verbose=False) :
+ess_scores = [x['cosine_distance'] for x in calibration_records]
+threshold = np. percentile(css_scores, 100-error_rate*100)
+chunk_texts = retrieved_chunks ['documents'] [0]
+scores = retrieved chunks['distances'][0]
+relevant_chunk_texts = [x for x, s in zip(chunk_texts, scores) if s ‹ threshold] if verbose:
+print(f'Target conformal certainty: {round (100-error_rate*100, 2)}')
+print(f'All chunks with css_scores < {round(threshold, 2)} should be included.')
+print(f'Num eligible chunks: {len(relevant_chunk_texts)} out of {len(chunk_texts)}. ')
+return relevant_chunk_texts
+
+
+def do_certain_rag(question,vector_db, calibration_records, error_rate, return_retrieved_chunks=True):
+# Find the minimum CSS threshold
+css_scores = [x['cosine_distance'] for x in calibration_records]
+threshold = np. percentile(css_scores, 100-error_rate*100)
+# A build the context using the relevant chunks
+retrieved_chunks = vector_db. query (
+query_texts=question, n_results=vector_db.count())
+chunk_texts = retrieved_chunks[ 'documents'] [0]
+scores = retrieved_chunks[ 'distances'][0]
+relevant_chunk_texts = [x for x, s in zip(chunk_texts, scores) if s ‹ threshold] context 7 "In\n". join(text for text in relevant_chunk_texts)
+print(f"Number of relevant chunks found: {len(relevant_chunk_texts)}\n")
+# Build the prompt using the context and question
+prompt= f"*™
+### [INST]
+Instruction: Answer the question based on the provided context. Only rely on the context to build your answer and do not use your own knowledge:
+(context)
+### QUESTION:
+{question}
+[/INST]
+# Ask the prompt from the Language model
+1lm_response = qa_with_hf_11ms (prompt, mistral_model, mistral_tokenizer)
+if return_retrieved_chunks:
+return llm_esponse, context
+else:
+return llm_response

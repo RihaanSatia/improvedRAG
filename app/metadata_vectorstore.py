@@ -1,13 +1,13 @@
 import os
 from typing import Dict, List, Optional
-from langchain.vectorstores import FAISS
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import OpenAIEmbeddings
 from langchain.schema import Document
 import streamlit as st
 import numpy as np
 
 VECTORSTORE_PATH = os.path.join("data", "metadata_index")
-DEFAULT_CONFIDENCE_THRESHOLD = 0.25
+DEFAULT_CONFIDENCE_THRESHOLD = 0.45
 
 def store_descriptions_in_vectorstore(documents: list[Document]) -> None:
     os.makedirs(os.path.dirname(VECTORSTORE_PATH), exist_ok=True)
@@ -26,7 +26,7 @@ def get_confidence_summary(
                 'sufficient_confidence': False
             }
         
-        scores = [match['confidence'] for match in scored_matches]
+        scores = [match['cosine_distance'] for match in scored_matches]
         return {
             'average_confidence': round(np.mean(scores), 3),
             'max_confidence': round(max(scores),3),
@@ -34,7 +34,7 @@ def get_confidence_summary(
             'sufficient_confidence': max(scores) >= threshold
         }
 
-def search_metadata_with_scores(query: str, k: int = 4, confidence_threshold: float = DEFAULT_CONFIDENCE_THRESHOLD) -> Dict:
+def search_metadata_with_scores(query: str, k: int = 10, confidence_threshold: float = DEFAULT_CONFIDENCE_THRESHOLD) -> Dict:
     vectorstore = FAISS.load_local(
         VECTORSTORE_PATH,
         OpenAIEmbeddings(),
@@ -42,19 +42,17 @@ def search_metadata_with_scores(query: str, k: int = 4, confidence_threshold: fl
     )
     docs_and_scores = vectorstore.similarity_search_with_score(query, k=k)
     scored_matches = []
-    st.write(docs_and_scores)
+    #st.write(docs_and_scores)
     for doc, score in docs_and_scores:
-        confidence = float(score)
-        
-        if score >= confidence_threshold:
+        if score <= confidence_threshold:
             scored_matches.append(
                 {
                     'content': doc.page_content,
                     'metadata': doc.metadata,
-                    'confidence': round(confidence,3)
+                    'cosine_distance': round(score,3)
                 }
             )
-    scored_matches.sort(key = lambda x: x['confidence'], reverse=True)
+    scored_matches.sort(key = lambda x: x['cosine_distance'])
 
     confidence_summary = get_confidence_summary(scored_matches, confidence_threshold)
     return {
