@@ -10,7 +10,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def infer_table_metadata_from_columns(table_name: str, columns: List[Dict[str, str]]) -> Dict:
-    column_list_str = "\n".join(f"- {col['name']}: {col['type']}" for col in columns)
+    column_list_str = "\n".join(
+        f"- {col['name']}: {col['type']}\n  Sample values: {', '.join(col['sample_values'])}"
+        for col in columns
+    )
     #print("this is the metadata prompt:" , METADATA_PROMPT)
     prompt = METADATA_PROMPT.format(table_name=table_name, column_list=column_list_str)
     llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")

@@ -19,10 +19,10 @@ def load_config():
     
     # Calculate distribution based on percentages
     questions_per_category = {
-        'single_column': int(total_questions * 0.21),    # 21%
-        'multi_column': int(total_questions * 0.21),     # 21%
-        'table_purpose': int(total_questions * 0.14),    # 14%
-        'business_logic': int(total_questions * 0.44)    # 44%
+        'single_column': int(total_questions * 0.3),    # 21%
+        'multi_column': int(total_questions * 0.2),     # 21%
+        'table_purpose': int(total_questions * 0.1),    # 14%
+        'business_logic': int(total_questions * 0.4)    # 44%
     }
     
     # Ensure we don't lose any questions due to rounding

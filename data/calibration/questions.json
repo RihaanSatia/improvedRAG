@@ -1,204 +1,98 @@
 {
-  "last_updated": "2025-04-15T01:25:30.526690",
+  "last_updated": "2025-04-15T17:05:39.685851",
   "records": [
     {
-      "question": "How many credit card loans are delinquent between 0-180 days for each credit union?",
-      "chunk": "Deliquent Credit card loans (Amount) 0-180 (INTEGER): Amount of delinquent credit card loans within 0-180 days",
-      "cosine_distance": 0.17299999296665192,
+      "question": "How many delinquent credit card loans were for 180 days or more among the credit unions?",
+      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans overdue by 180 days or more.",
+      "cosine_distance": 0.17800000309944153,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Deliquent Credit card loans (Amount) 180+"
+      },
+      "source_columns": [
+        "Deliquent Credit card loans (Amount) 180+"
+      ],
+      "timestamp": "2025-04-15T17:05:27.597220"
+    },
+    {
+      "question": "How does the average amount of delinquent credit card loans (both 0-180 days and 180+ days) compare to the total net worth of credit unions, indicating their risk exposure and financial stability?",
+      "chunk": "Deliquent Credit card loans (Amount) 0-180 (INTEGER): Amount of delinquent credit card loans overdue by 0-180 days.",
+      "cosine_distance": 0.1979999989271164,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
         "column_name": "Deliquent Credit card loans (Amount) 0-180"
       },
       "source_columns": [
-        "CU_NAME",
-        "CU_NUMBER",
-        "Deliquent Credit card loans (Amount) 0-180"
+        "Deliquent Credit card loans (Amount) 0-180",
+        "Net_Worth",
+        "Deliquent Credit card loans (Amount) 180+"
       ],
-      "timestamp": "2025-04-15T01:25:17.819389"
+      "timestamp": "2025-04-15T17:05:36.003441"
     },
     {
-      "question": "How do the total amount of loans and leases compare to the total assets for each credit union in each quarter?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.2680000066757202,
+      "question": "How much money do credit unions have in total assets?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.20999999344348907,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
         "column_name": "TOTAL_ASSETS"
       },
       "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Quarter",
         "TOTAL_ASSETS"
       ],
-      "timestamp": "2025-04-15T01:25:19.654306"
+      "timestamp": "2025-04-15T17:05:23.519970"
     },
     {
-      "question": "How does the Total Amount of Loans and Leases, Net Income, and Total Number of Employees correlate with the Delinquent Credit card loans (Amount) 180+ for each credit union, and what strategic insights can be derived from this correlation?",
-      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans over 180 days",
-      "cosine_distance": 0.2680000066757202,
+      "question": "How does the average amount of delinquent credit card loans (both 0-180 days and 180+ days) compare to the total net worth of credit unions, indicating their risk exposure and financial stability?",
+      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans overdue by 180 days or more.",
+      "cosine_distance": 0.20999999344348907,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
         "column_name": "Deliquent Credit card loans (Amount) 180+"
       },
       "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Total_Employees",
-        "Net_Income",
+        "Deliquent Credit card loans (Amount) 0-180",
+        "Net_Worth",
         "Deliquent Credit card loans (Amount) 180+"
       ],
-      "timestamp": "2025-04-15T01:25:24.865730"
+      "timestamp": "2025-04-15T17:05:36.003513"
     },
     {
-      "question": "How do the total assets and net worth of credit unions vary across different quarters?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.2709999978542328,
+      "question": "How many new vehicle loans were issued by each credit union?",
+      "chunk": "Number_of_new_Vehicle_loans (INTEGER): Number of new vehicle loans initiated by the credit union.",
+      "cosine_distance": 0.21400000154972076,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
+        "column_name": "Number_of_new_Vehicle_loans"
       },
       "source_columns": [
-        "Quarter",
-        "TOTAL_ASSETS",
-        "Net_Worth"
+        "Number_of_new_Vehicle_loans"
       ],
-      "timestamp": "2025-04-15T01:25:22.674037"
+      "timestamp": "2025-04-15T17:05:27.273768"
     },
     {
-      "question": "How do the Total Amount of Loans and Leases, Net Income, Total Number of Employees, and Net Worth correlate with the Delinquent Credit card loans (Amount) 0-180 for each credit union, and what strategic insights can be derived from this correlation?",
-      "chunk": "Deliquent Credit card loans (Amount) 0-180 (INTEGER): Amount of delinquent credit card loans within 0-180 days",
-      "cosine_distance": 0.2750000059604645,
+      "question": "How many used vehicle loans were issued by each credit union?",
+      "chunk": "Number_of_Used_Vehicle_Loans (INTEGER): Number of used vehicle loans provided by the credit union.",
+      "cosine_distance": 0.22200000286102295,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "Deliquent Credit card loans (Amount) 0-180"
+        "column_name": "Number_of_Used_Vehicle_Loans"
       },
       "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Total_Employees",
-        "Deliquent Credit card loans (Amount) 0-180",
-        "Net_Income",
-        "Net_Worth"
+        "Number_of_Used_Vehicle_Loans"
       ],
-      "timestamp": "2025-04-15T01:25:26.419496"
+      "timestamp": "2025-04-15T17:05:25.535032"
     },
     {
-      "question": "How do the total assets and interest income of credit unions correlate with their net worth?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.2759999930858612,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "TOTAL_ASSETS",
-        "Interest_Income",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:21.003789"
-    },
-    {
-      "question": "How many shares and deposits does each credit union have in total?",
-      "chunk": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS (REAL): Total amount of shares and deposits",
-      "cosine_distance": 0.28200000524520874,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS"
-      },
-      "source_columns": [
-        "CU_NAME",
-        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS"
-      ],
-      "timestamp": "2025-04-15T01:25:18.242693"
-    },
-    {
-      "question": "How do the total assets and net income of credit unions correlate with the number of members they have?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.28600001335144043,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:20.349020"
-    },
-    {
-      "question": "How does the ratio of Non-Interest Income to Total Assets vary across credit unions with different levels of delinquent credit card loans (Amount) 0-180, and how does this ratio impact their overall financial stability?",
-      "chunk": "Deliquent Credit card loans (Amount) 0-180 (INTEGER): Amount of delinquent credit card loans within 0-180 days",
-      "cosine_distance": 0.28700000047683716,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Deliquent Credit card loans (Amount) 0-180"
-      },
-      "source_columns": [
-        "Total_Assets",
-        "Deliquent Credit card loans (Amount) 0-180",
-        "Non_Interest_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:28.599525"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets differ between credit unions with a high number of delinquent credit card loans (Amount) 180+ compared to credit unions with a low number of delinquent credit card loans?",
-      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans over 180 days",
-      "cosine_distance": 0.2879999876022339,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Deliquent Credit card loans (Amount) 180+"
-      },
-      "source_columns": [
-        "TOTAL_ASSETS",
-        "Net_Income",
-        "Deliquent Credit card loans (Amount) 180+"
-      ],
-      "timestamp": "2025-04-15T01:25:27.549759"
-    },
-    {
-      "question": "How do credit unions' total number of members relate to their net income and total assets?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.29100000858306885,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:22.134821"
-    },
-    {
-      "question": "How does the ratio of Non-Interest Income to Net Worth vary across credit unions with different levels of delinquent credit card loans (Amount) 0-180, and how does this ratio impact their overall financial stability?",
-      "chunk": "Deliquent Credit card loans (Amount) 0-180 (INTEGER): Amount of delinquent credit card loans within 0-180 days",
-      "cosine_distance": 0.29100000858306885,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Deliquent Credit card loans (Amount) 0-180"
-      },
-      "source_columns": [
-        "Deliquent Credit card loans (Amount) 0-180",
-        "Non_Interest_Income",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:29.521329"
-    },
-    {
-      "question": "How do the total amount of shares and deposits correlate with the net income for each credit union?",
-      "chunk": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS (REAL): Total amount of shares and deposits",
-      "cosine_distance": 0.2980000078678131,
+      "question": "How do the total amount of shares and deposits compare to the total net worth of credit unions, indicating their financial stability?",
+      "chunk": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS (REAL): Total amount of shares and deposits held by the credit union.",
+      "cosine_distance": 0.22699999809265137,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
@@ -206,297 +100,14 @@
       },
       "source_columns": [
         "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:19.943749"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the number of members and the total amount of loans and leases held by each credit union?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.3019999861717224,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:25.195573"
-    },
-    {
-      "question": "How does the ratio of Non-Interest Income to Total Assets vary across credit unions with different levels of delinquent credit card loans (Amount) 0-180, and how does this ratio impact their overall Net Income?",
-      "chunk": "Deliquent Credit card loans (Amount) 0-180 (INTEGER): Amount of delinquent credit card loans within 0-180 days",
-      "cosine_distance": 0.3019999861717224,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Deliquent Credit card loans (Amount) 0-180"
-      },
-      "source_columns": [
-        "Total_Assets",
-        "Deliquent Credit card loans (Amount) 0-180",
-        "Non_Interest_Income",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:25.730776"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the number of members and the total amount of loans and leases held by each credit union?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.3019999861717224,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:26.643380"
-    },
-    {
-      "question": "How does the ratio of Non-Interest Income to Total Assets vary across credit unions with different levels of delinquent credit card loans (Amount) 180+, and how does this ratio impact their overall financial stability?",
-      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans over 180 days",
-      "cosine_distance": 0.3019999861717224,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Deliquent Credit card loans (Amount) 180+"
-      },
-      "source_columns": [
-        "Total_Assets",
-        "Non_Interest_Income",
-        "Deliquent Credit card loans (Amount) 180+"
-      ],
-      "timestamp": "2025-04-15T01:25:26.961562"
-    },
-    {
-      "question": "What trends can we observe in the total assets, net income, and number of employees of credit unions over different quarters?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.30399999022483826,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "Quarter",
-        "TOTAL_ASSETS",
-        "Total_Employees",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:23.067190"
-    },
-    {
-      "question": "How do credit unions' total assets, net income, and number of members align with their overall purpose or mission statement?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.3070000112056732,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:23.250999"
-    },
-    {
-      "question": "How do credit unions' total assets and net income vary based on the number of members they have?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.3070000112056732,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:23.639566"
-    },
-    {
-      "question": "What trends can we observe in the relationship between the total assets, net income, and number of employees for credit unions?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.30799999833106995,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "TOTAL_ASSETS",
-        "Total_Employees",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:24.098325"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the number of members and the total amount of loans and leases held by each credit union, and what strategic implications can be drawn from this relationship?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.31299999356269836,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:29.009199"
-    },
-    {
-      "question": "How does the ratio of Net Worth to Total Assets vary based on the Total Number of Employees and the Total Amount of Loans and Leases held by each credit union, and what strategic implications can be drawn from this relationship?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.31299999356269836,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "TOTAL_ASSETS",
-        "Total_Number_of_loans_and_leases",
-        "Total_Employees",
         "Net_Worth"
       ],
-      "timestamp": "2025-04-15T01:25:30.035694"
+      "timestamp": "2025-04-15T17:05:33.834919"
     },
     {
-      "question": "How does the total number of used vehicle loans, the amount of total share draft, and net income correlate with the total assets for each credit union, and what insights can be gained from this correlation?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.3140000104904175,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "CU_NUMBER",
-        "Amount_of_Total_Share_Draft",
-        "Quarter",
-        "Number_of_Used_Vehicle_Loans",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:28.094430"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the Total Number of Employees and the Total Amount of Loans and Leases for each credit union, and what strategic implications can be drawn from this relationship?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.31700000166893005,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Total_Number_of_Employees",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:27.780671"
-    },
-    {
-      "question": "How do the total amount of loans and leases compare to the total assets for each credit union in each quarter?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.32100000977516174,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_amount_of_loans_and_leases"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Quarter",
-        "TOTAL_ASSETS"
-      ],
-      "timestamp": "2025-04-15T01:25:19.654377"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the Total Number of Employees and the Total Amount of Loans and Leases held by each credit union, and what strategic implications can be drawn from this relationship?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.32100000977516174,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Total_Number_of_Employees",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:28.306042"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets differ between credit unions with a high number of delinquent credit card loans (Amount) 180+ compared to credit unions with a low number of delinquent credit card loans?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.32199999690055847,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "TOTAL_ASSETS",
-        "Net_Income",
-        "Deliquent Credit card loans (Amount) 180+"
-      ],
-      "timestamp": "2025-04-15T01:25:27.549828"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the total number of members and the interest income for each credit union, and how does this impact their overall financial performance?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.3230000138282776,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "Interest_Income",
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:29.252752"
-    },
-    {
-      "question": "How many money market shares does each credit union have?",
-      "chunk": "Total_Number_of_money_market_shares (INTEGER): Total number of money market shares",
-      "cosine_distance": 0.32899999618530273,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_Number_of_money_market_shares"
-      },
-      "source_columns": [
-        "Total_Number_of_money_market_shares",
-        "Money Market (Amount)"
-      ],
-      "timestamp": "2025-04-15T01:25:18.022815"
-    },
-    {
-      "question": "How many loans and leases, in total, does each credit union have?",
-      "chunk": "Total_number_of_loans_and_leases (INTEGER): Total number of loans and leases",
-      "cosine_distance": 0.3310000002384186,
+      "question": "How many loans and leases were provided by each credit union?",
+      "chunk": "Total_number_of_loans_and_leases (INTEGER): Total number of loans and leases offered by the credit union.",
+      "cosine_distance": 0.23199999332427979,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
@@ -505,519 +116,70 @@
       "source_columns": [
         "Total_number_of_loans_and_leases"
       ],
-      "timestamp": "2025-04-15T01:25:18.767109"
+      "timestamp": "2025-04-15T17:05:26.407165"
     },
     {
-      "question": "How does the ratio of Net Worth to Total Assets vary across credit unions based on their Net Income and Number of Members, and what implications does this ratio have on their financial stability?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.3310000002384186,
+      "question": "How many money market shares do credit unions possess?",
+      "chunk": "Total_Number_of_money_market_shares (INTEGER): Total number of money market shares held by the credit union.",
+      "cosine_distance": 0.24300000071525574,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
+        "column_name": "Total_Number_of_money_market_shares"
       },
       "source_columns": [
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income",
-        "Net_Worth"
+        "Total_Number_of_money_market_shares"
       ],
-      "timestamp": "2025-04-15T01:25:26.103181"
-    },
-    {
-      "question": "Which credit unions have the highest ratio of Net Income to Total Assets, and how does this ratio correlate with the number of members and total amount of loans and leases they hold?",
-      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union",
-      "cosine_distance": 0.34200000762939453,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "TOTAL_ASSETS"
-      },
-      "source_columns": [
-        "NO_OF_MEMBERS",
-        "Total_amount_of_loans_and_leases",
-        "TOTAL_ASSETS",
-        "CU_NAME",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:27.329276"
+      "timestamp": "2025-04-15T17:05:28.601237"
     },
     {
       "question": "How many members are associated with each credit union?",
-      "chunk": "CU_NAME (TEXT): Name of the credit union",
-      "cosine_distance": 0.3449999988079071,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "CU_NAME"
-      },
-      "source_columns": [
-        "CU_NAME",
-        "CU_NUMBER",
-        "NO_OF_MEMBERS"
-      ],
-      "timestamp": "2025-04-15T01:25:17.459906"
-    },
-    {
-      "question": "How many money market shares does each credit union have?",
-      "chunk": "Money Market (Amount) (INTEGER): Amount in money market",
-      "cosine_distance": 0.3540000021457672,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Money Market (Amount)"
-      },
-      "source_columns": [
-        "Total_Number_of_money_market_shares",
-        "Money Market (Amount)"
-      ],
-      "timestamp": "2025-04-15T01:25:18.022883"
-    },
-    {
-      "question": "How does the Total Amount of Loans and Leases, Net Income, and Total Number of Employees correlate with the Delinquent Credit card loans (Amount) 180+ for each credit union, and what strategic insights can be derived from this correlation?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.3630000054836273,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_amount_of_loans_and_leases"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Total_Employees",
-        "Net_Income",
-        "Deliquent Credit card loans (Amount) 180+"
-      ],
-      "timestamp": "2025-04-15T01:25:24.865806"
-    },
-    {
-      "question": "How do the Total Amount of Loans and Leases, Net Income, Total Number of Employees, and Net Worth correlate with the Delinquent Credit card loans (Amount) 0-180 for each credit union, and what strategic insights can be derived from this correlation?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.3659999966621399,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_amount_of_loans_and_leases"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Total_Employees",
-        "Deliquent Credit card loans (Amount) 0-180",
-        "Net_Income",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:26.419632"
-    },
-    {
-      "question": "How does the ratio of Non-Interest Income to Total Assets vary across credit unions with different levels of delinquent credit card loans (Amount) 0-180, and how does this ratio impact their overall Net Income?",
-      "chunk": "Non_Interest_Income (INTEGER): Non-interest income",
-      "cosine_distance": 0.375,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Non_Interest_Income"
-      },
-      "source_columns": [
-        "Total_Assets",
-        "Deliquent Credit card loans (Amount) 0-180",
-        "Non_Interest_Income",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:25.730852"
-    },
-    {
-      "question": "How does the total number of used vehicle loans, the amount of total share draft, and net income correlate with the total assets for each credit union, and what insights can be gained from this correlation?",
-      "chunk": "Number_of_Used_Vehicle_Loans (INTEGER): Number of used vehicle loans",
-      "cosine_distance": 0.37599998712539673,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Number_of_Used_Vehicle_Loans"
-      },
-      "source_columns": [
-        "CU_NUMBER",
-        "Amount_of_Total_Share_Draft",
-        "Quarter",
-        "Number_of_Used_Vehicle_Loans",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:28.094505"
-    },
-    {
-      "question": "How many members are associated with each credit union?",
-      "chunk": "CU_NUMBER (INTEGER): Unique identifier for credit union",
-      "cosine_distance": 0.382999986410141,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "CU_NUMBER"
-      },
-      "source_columns": [
-        "CU_NAME",
-        "CU_NUMBER",
-        "NO_OF_MEMBERS"
-      ],
-      "timestamp": "2025-04-15T01:25:17.459987"
-    },
-    {
-      "question": "How much did each credit union earn in Net Worth?",
-      "chunk": "Net_Worth (INTEGER): Net worth",
-      "cosine_distance": 0.38499999046325684,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Net_Worth"
-      },
-      "source_columns": [
-        "CU_NAME",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:19.130275"
-    },
-    {
-      "question": "How many shares and deposits does each credit union have in total?",
-      "chunk": "CU_NAME (TEXT): Name of the credit union",
-      "cosine_distance": 0.3869999945163727,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "CU_NAME"
-      },
-      "source_columns": [
-        "CU_NAME",
-        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS"
-      ],
-      "timestamp": "2025-04-15T01:25:18.242728"
-    },
-    {
-      "question": "How do credit unions' interest expenses compare to their non-interest income in terms of impacting their overall net income?",
-      "chunk": "Non_Interest_Income (INTEGER): Non-interest income",
-      "cosine_distance": 0.3880000114440918,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Non_Interest_Income"
-      },
-      "source_columns": [
-        "Interest_Expense",
-        "Non_Interest_Income",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:21.871651"
-    },
-    {
-      "question": "How does the total number of used vehicle loans, the amount of total share draft, and net income correlate with the total assets for each credit union, and what insights can be gained from this correlation?",
-      "chunk": "Amount_of_Total_Share_Draft (INTEGER): Amount of total share draft",
-      "cosine_distance": 0.38999998569488525,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Amount_of_Total_Share_Draft"
-      },
-      "source_columns": [
-        "CU_NUMBER",
-        "Amount_of_Total_Share_Draft",
-        "Quarter",
-        "Number_of_Used_Vehicle_Loans",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:28.094526"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the Total Number of Employees and the Total Amount of Loans and Leases for each credit union, and what strategic implications can be drawn from this relationship?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.39100000262260437,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_amount_of_loans_and_leases"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Total_Number_of_Employees",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:27.780750"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the Total Number of Employees and the Total Amount of Loans and Leases held by each credit union, and what strategic implications can be drawn from this relationship?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.3919999897480011,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_amount_of_loans_and_leases"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Total_Number_of_Employees",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:28.306092"
-    },
-    {
-      "question": "How does the ratio of Non-Interest Income to Net Worth vary across credit unions with different levels of delinquent credit card loans (Amount) 0-180, and how does this ratio impact their overall financial stability?",
-      "chunk": "Non_Interest_Income (INTEGER): Non-interest income",
-      "cosine_distance": 0.3919999897480011,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Non_Interest_Income"
-      },
-      "source_columns": [
-        "Deliquent Credit card loans (Amount) 0-180",
-        "Non_Interest_Income",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:29.521397"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the number of members and the total amount of loans and leases held by each credit union?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.39399999380111694,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_amount_of_loans_and_leases"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:25.195619"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the number of members and the total amount of loans and leases held by each credit union?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.39399999380111694,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_amount_of_loans_and_leases"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:26.643453"
-    },
-    {
-      "question": "How does the ratio of Non-Interest Income to Total Assets vary across credit unions with different levels of delinquent credit card loans (Amount) 0-180, and how does this ratio impact their overall financial stability?",
-      "chunk": "Non_Interest_Income (INTEGER): Non-interest income",
-      "cosine_distance": 0.3970000147819519,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Non_Interest_Income"
-      },
-      "source_columns": [
-        "Total_Assets",
-        "Deliquent Credit card loans (Amount) 0-180",
-        "Non_Interest_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:28.599605"
-    },
-    {
-      "question": "How do credit unions' interest income and expenses relate to their total net income?",
-      "chunk": "Interest_Expense (INTEGER): Interest expense",
-      "cosine_distance": 0.39800000190734863,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Interest_Expense"
-      },
-      "source_columns": [
-        "Interest_Expense",
-        "Net_Income",
-        "Interest_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:21.430070"
-    },
-    {
-      "question": "How does the interest income correlate with the total number of employees at each credit union?",
-      "chunk": "Interest_Income (INTEGER): Interest income",
-      "cosine_distance": 0.39899998903274536,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Interest_Income"
-      },
-      "source_columns": [
-        "Total_Employees",
-        "Interest_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:20.603136"
-    },
-    {
-      "question": "How does the ratio of Non-Interest Income to Total Assets vary across credit unions with different levels of delinquent credit card loans (Amount) 180+, and how does this ratio impact their overall financial stability?",
-      "chunk": "Non_Interest_Income (INTEGER): Non-interest income",
-      "cosine_distance": 0.4000000059604645,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Non_Interest_Income"
-      },
-      "source_columns": [
-        "Total_Assets",
-        "Non_Interest_Income",
-        "Deliquent Credit card loans (Amount) 180+"
-      ],
-      "timestamp": "2025-04-15T01:25:26.961633"
-    },
-    {
-      "question": "How does the interest income correlate with the total number of employees at each credit union?",
-      "chunk": "Total_Employees (INTEGER): Total number of employees",
-      "cosine_distance": 0.4009999930858612,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_Employees"
-      },
-      "source_columns": [
-        "Total_Employees",
-        "Interest_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:20.603210"
-    },
-    {
-      "question": "How do the total assets and interest income of credit unions correlate with their net worth?",
-      "chunk": "Net_Worth (INTEGER): Net worth",
-      "cosine_distance": 0.4009999930858612,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Net_Worth"
-      },
-      "source_columns": [
-        "TOTAL_ASSETS",
-        "Interest_Income",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:21.003866"
-    },
-    {
-      "question": "How do credit unions' interest expenses compare to their non-interest income in terms of impacting their overall net income?",
-      "chunk": "Interest_Expense (INTEGER): Interest expense",
-      "cosine_distance": 0.4020000100135803,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Interest_Expense"
-      },
-      "source_columns": [
-        "Interest_Expense",
-        "Non_Interest_Income",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:21.871724"
-    },
-    {
-      "question": "How does the ratio of Net Income to Total Assets vary based on the number of members and the total amount of loans and leases held by each credit union, and what strategic implications can be drawn from this relationship?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.4020000100135803,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Total_amount_of_loans_and_leases"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:29.009274"
-    },
-    {
-      "question": "How much money did each credit union earn as Net Income?",
-      "chunk": "CU_NAME (TEXT): Name of the credit union",
-      "cosine_distance": 0.40299999713897705,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "CU_NAME"
-      },
-      "source_columns": [
-        "CU_NAME",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:17.153679"
-    },
-    {
-      "question": "How many members are associated with each credit union?",
-      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members",
-      "cosine_distance": 0.4090000092983246,
+      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members associated with the credit union.",
+      "cosine_distance": 0.2460000067949295,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
         "column_name": "NO_OF_MEMBERS"
       },
       "source_columns": [
-        "CU_NAME",
-        "CU_NUMBER",
         "NO_OF_MEMBERS"
       ],
-      "timestamp": "2025-04-15T01:25:17.460009"
+      "timestamp": "2025-04-15T17:05:24.144677"
     },
     {
-      "question": "How do credit unions' interest income and expenses relate to their total net income?",
-      "chunk": "Interest_Income (INTEGER): Interest income",
-      "cosine_distance": 0.41100001335144043,
+      "question": "How does the total amount of loans and leases compare to the total amount of shares and deposits for each credit union, in terms of financial stability?",
+      "chunk": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS (REAL): Total amount of shares and deposits held by the credit union.",
+      "cosine_distance": 0.24899999797344208,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "Interest_Income"
+        "column_name": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS"
       },
       "source_columns": [
-        "Interest_Expense",
-        "Net_Income",
-        "Interest_Income"
+        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
+        "Total_amount_of_loans_and_leases"
       ],
-      "timestamp": "2025-04-15T01:25:21.430152"
+      "timestamp": "2025-04-15T17:05:30.177728"
     },
     {
-      "question": "How do the total assets and net worth of credit unions vary across different quarters?",
-      "chunk": "Quarter (TEXT): Quarter or time period",
-      "cosine_distance": 0.4129999876022339,
+      "question": "How much net income did each credit union generate?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.25,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "Quarter"
-      },
-      "source_columns": [
-        "Quarter",
-        "TOTAL_ASSETS",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:22.674114"
-    },
-    {
-      "question": "How much did each credit union earn in Net Worth?",
-      "chunk": "CU_NAME (TEXT): Name of the credit union",
-      "cosine_distance": 0.41499999165534973,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "CU_NAME"
+        "column_name": "Net_Income"
       },
       "source_columns": [
         "CU_NAME",
-        "Net_Worth"
+        "Net_Income"
       ],
-      "timestamp": "2025-04-15T01:25:19.130335"
+      "timestamp": "2025-04-15T17:05:24.525861"
     },
     {
-      "question": "How many employees work at each credit union?",
-      "chunk": "Total_Employees (INTEGER): Total number of employees",
-      "cosine_distance": 0.41999998688697815,
+      "question": "How many employees are employed at each credit union?",
+      "chunk": "Total_Employees (INTEGER): Total number of employees working for the credit union.",
+      "cosine_distance": 0.25200000405311584,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
@@ -1026,262 +188,440 @@
       "source_columns": [
         "Total_Employees"
       ],
-      "timestamp": "2025-04-15T01:25:19.337967"
+      "timestamp": "2025-04-15T17:05:26.092728"
     },
     {
-      "question": "Which credit unions have the highest ratio of Net Income to Total Assets, and how does this ratio correlate with the number of members and total amount of loans and leases they hold?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.41999998688697815,
+      "question": "How does the total amount of loans and leases compare to the total amount of shares and deposits for each credit union, in terms of financial stability?",
+      "chunk": "Total_amount_of_loans_and_leases (REAL): Total monetary value of loans and leases provided by the credit union.",
+      "cosine_distance": 0.25600001215934753,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
         "column_name": "Total_amount_of_loans_and_leases"
       },
       "source_columns": [
-        "NO_OF_MEMBERS",
-        "Total_amount_of_loans_and_leases",
-        "TOTAL_ASSETS",
-        "CU_NAME",
-        "Net_Income"
+        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
+        "Total_amount_of_loans_and_leases"
       ],
-      "timestamp": "2025-04-15T01:25:27.329344"
+      "timestamp": "2025-04-15T17:05:30.177800"
     },
     {
-      "question": "How much money did each credit union earn as Net Income?",
-      "chunk": "Net_Income (INTEGER): Net income",
-      "cosine_distance": 0.42100000381469727,
+      "question": "What is the relationship between the total net worth of credit unions and their total assets, in terms of overall financial health?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.2590000033378601,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "Net_Income"
+        "column_name": "Net_Worth"
       },
       "source_columns": [
-        "CU_NAME",
-        "Net_Income"
+        "TOTAL_ASSETS",
+        "Net_Worth"
       ],
-      "timestamp": "2025-04-15T01:25:17.153751"
+      "timestamp": "2025-04-15T17:05:34.126616"
     },
     {
-      "question": "How does the ratio of interest income to interest expense vary across different credit unions, and how does this ratio impact their net income in relation to the total amount of loans and leases they hold?",
-      "chunk": "Interest_Expense (INTEGER): Interest expense",
-      "cosine_distance": 0.42399999499320984,
+      "question": "How do the number of new vehicle loans issued by credit unions compare to the total number of employees they have?",
+      "chunk": "Number_of_new_Vehicle_loans (INTEGER): Number of new vehicle loans initiated by the credit union.",
+      "cosine_distance": 0.25999999046325684,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Number_of_new_Vehicle_loans"
+      },
+      "source_columns": [
+        "Total_Employees",
+        "Number_of_new_Vehicle_loans"
+      ],
+      "timestamp": "2025-04-15T17:05:30.408204"
+    },
+    {
+      "question": "How does the total amount of loans and leases provided by credit unions compare to their total net worth, in terms of financial strength?",
+      "chunk": "Total_amount_of_loans_and_leases (REAL): Total monetary value of loans and leases provided by the credit union.",
+      "cosine_distance": 0.26100000739097595,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Total_amount_of_loans_and_leases"
+      },
+      "source_columns": [
+        "Net_Worth",
+        "Total_amount_of_loans_and_leases"
+      ],
+      "timestamp": "2025-04-15T17:05:32.950316"
+    },
+    {
+      "question": "How does the ratio of Total Amount of Loans and Leases to Total Assets vary across different credit unions?",
+      "chunk": "Total_amount_of_loans_and_leases (REAL): Total monetary value of loans and leases provided by the credit union.",
+      "cosine_distance": 0.26100000739097595,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Total_amount_of_loans_and_leases"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
+        "Total_amount_of_loans_and_leases"
+      ],
+      "timestamp": "2025-04-15T17:05:33.155070"
+    },
+    {
+      "question": "What is the relationship between the total net worth and the total number of members in credit unions?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.2619999945163727,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Net_Worth"
+      ],
+      "timestamp": "2025-04-15T17:05:34.417547"
+    },
+    {
+      "question": "What is the relationship between the total net worth of credit unions and their total assets, in terms of overall financial health?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.2639999985694885,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_ASSETS"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "Net_Worth"
+      ],
+      "timestamp": "2025-04-15T17:05:34.126699"
+    },
+    {
+      "question": "How many shares do credit unions have in total?",
+      "chunk": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS (REAL): Total amount of shares and deposits held by the credit union.",
+      "cosine_distance": 0.26499998569488525,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS"
+      },
+      "source_columns": [
+        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS"
+      ],
+      "timestamp": "2025-04-15T17:05:25.143338"
+    },
+    {
+      "question": "How do the total assets of credit unions correlate with the number of members they have?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.2669999897480011,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_ASSETS"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "TOTAL_ASSETS"
+      ],
+      "timestamp": "2025-04-15T17:05:32.233404"
+    },
+    {
+      "question": "How many members are part of each credit union?",
+      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members associated with the credit union.",
+      "cosine_distance": 0.2709999978542328,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "NO_OF_MEMBERS"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS"
+      ],
+      "timestamp": "2025-04-15T17:05:26.717895"
+    },
+    {
+      "question": "How does the ratio of interest income to net income differ among credit unions based on the total amount of new vehicle loans issued?",
+      "chunk": "Amount_of_new_vehicle_loans (INTEGER): Amount of new vehicle loans initiated by the credit union.",
+      "cosine_distance": 0.2709999978542328,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Amount_of_new_vehicle_loans"
+      },
+      "source_columns": [
+        "Amount_of_new_vehicle_loans",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:37.013775"
+    },
+    {
+      "question": "How much interest income did each credit union earn?",
+      "chunk": "Interest_Income (INTEGER): Income generated from interest by the credit union.",
+      "cosine_distance": 0.27300000190734863,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Interest_Income"
+      },
+      "source_columns": [
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:28.139401"
+    },
+    {
+      "question": "How does the number of money market shares held by credit unions correlate with their net worth, in terms of financial stability?",
+      "chunk": "Total_Number_of_money_market_shares (INTEGER): Total number of money market shares held by the credit union.",
+      "cosine_distance": 0.27300000190734863,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Total_Number_of_money_market_shares"
+      },
+      "source_columns": [
+        "Total_Number_of_money_market_shares",
+        "Net_Worth"
+      ],
+      "timestamp": "2025-04-15T17:05:31.695469"
+    },
+    {
+      "question": "How do the total assets of credit unions correlate with their net income, in terms of financial performance?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.2750000059604645,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_ASSETS"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:31.078916"
+    },
+    {
+      "question": "How does the ratio of total amount of loans and leases to total assets vary among credit unions with different levels of delinquent credit card loans for 180+ days, indicating the potential impact of credit risk on financial stability?",
+      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans overdue by 180 days or more.",
+      "cosine_distance": 0.2750000059604645,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Deliquent Credit card loans (Amount) 180+"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "Deliquent Credit card loans (Amount) 180+",
+        "Total_amount_of_loans_and_leases"
+      ],
+      "timestamp": "2025-04-15T17:05:39.684921"
+    },
+    {
+      "question": "How does the ratio of interest income to net income differ among credit unions based on the total number of members they have, considering the total amount of new vehicle loans issued?",
+      "chunk": "Amount_of_new_vehicle_loans (INTEGER): Amount of new vehicle loans initiated by the credit union.",
+      "cosine_distance": 0.27799999713897705,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Amount_of_new_vehicle_loans"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Amount_of_new_vehicle_loans",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:38.772487"
+    },
+    {
+      "question": "How do credit unions manage their interest income compared to their interest expenses?",
+      "chunk": "Interest_Expense (INTEGER): Expenses incurred due to interest payments by the credit union.",
+      "cosine_distance": 0.28299999237060547,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
         "column_name": "Interest_Expense"
       },
       "source_columns": [
-        "Total_amount_of_loans_and_leases",
         "Interest_Expense",
-        "Net_Income",
         "Interest_Income"
       ],
-      "timestamp": "2025-04-15T01:25:24.463801"
+      "timestamp": "2025-04-15T17:05:33.442868"
     },
     {
-      "question": "How many credit card loans are delinquent between 0-180 days for each credit union?",
-      "chunk": "CU_NAME (TEXT): Name of the credit union",
-      "cosine_distance": 0.42800000309944153,
+      "question": "How does the total net worth of credit unions correlate with the number of delinquent credit card loans for 180+ days, considering the total amount of shares and deposits they hold?",
+      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans overdue by 180 days or more.",
+      "cosine_distance": 0.28700000047683716,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "CU_NAME"
+        "column_name": "Deliquent Credit card loans (Amount) 180+"
       },
       "source_columns": [
-        "CU_NAME",
-        "CU_NUMBER",
-        "Deliquent Credit card loans (Amount) 0-180"
+        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
+        "Net_Worth",
+        "Deliquent Credit card loans (Amount) 180+"
       ],
-      "timestamp": "2025-04-15T01:25:17.819460"
+      "timestamp": "2025-04-15T17:05:37.576645"
     },
     {
-      "question": "How does the ratio of interest income to interest expense vary across different credit unions, and how does this ratio impact their net income in relation to the total amount of loans and leases they hold?",
-      "chunk": "Total_amount_of_loans_and_leases (REAL): Total amount of loans and leases",
-      "cosine_distance": 0.42899999022483826,
+      "question": "How does the total net worth of credit unions correlate with the number of delinquent credit card loans for 180+ days, considering the total amount of shares and deposits they hold?",
+      "chunk": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS (REAL): Total amount of shares and deposits held by the credit union.",
+      "cosine_distance": 0.28700000047683716,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS"
+      },
+      "source_columns": [
+        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
+        "Net_Worth",
+        "Deliquent Credit card loans (Amount) 180+"
+      ],
+      "timestamp": "2025-04-15T17:05:37.576718"
+    },
+    {
+      "question": "How does the ratio of non-interest income to total net worth vary among credit unions with different levels of delinquent credit card loans for 180+ days, indicating the impact of risk exposure on financial performance?",
+      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans overdue by 180 days or more.",
+      "cosine_distance": 0.2879999876022339,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Deliquent Credit card loans (Amount) 180+"
+      },
+      "source_columns": [
+        "Deliquent Credit card loans (Amount) 180+",
+        "Net_Worth",
+        "Non_Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:39.075306"
+    },
+    {
+      "question": "How do the total amount of shares and deposits compare to the total net worth of credit unions, indicating their financial stability?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.289000004529953,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
+        "Net_Worth"
+      ],
+      "timestamp": "2025-04-15T17:05:33.834985"
+    },
+    {
+      "question": "How does the total net worth of credit unions compare to the total amount of loans and leases they provide, in terms of financial strength?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.2930000126361847,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "Total_number_of_loans_and_leases",
+        "Net_Worth"
+      ],
+      "timestamp": "2025-04-15T17:05:32.568539"
+    },
+    {
+      "question": "How does the ratio of non-interest income to total net worth differ among credit unions with varying numbers of members?",
+      "chunk": "Non_Interest_Income (INTEGER): Income generated by the credit union excluding interest-related income.",
+      "cosine_distance": 0.29499998688697815,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Non_Interest_Income"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Net_Worth",
+        "Non_Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:36.713799"
+    },
+    {
+      "question": "How does the total amount of loans and leases provided by credit unions compare to their total net worth, in terms of financial strength?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.3019999861717224,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "Net_Worth",
+        "Total_amount_of_loans_and_leases"
+      ],
+      "timestamp": "2025-04-15T17:05:32.950395"
+    },
+    {
+      "question": "How does the ratio of total amount of loans and leases to total assets vary among credit unions with different levels of delinquent credit card loans for 180+ days, indicating the potential impact of credit risk on financial stability?",
+      "chunk": "Total_amount_of_loans_and_leases (REAL): Total monetary value of loans and leases provided by the credit union.",
+      "cosine_distance": 0.30300000309944153,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
         "column_name": "Total_amount_of_loans_and_leases"
       },
       "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Interest_Expense",
-        "Net_Income",
-        "Interest_Income"
+        "TOTAL_ASSETS",
+        "Deliquent Credit card loans (Amount) 180+",
+        "Total_amount_of_loans_and_leases"
       ],
-      "timestamp": "2025-04-15T01:25:24.463875"
+      "timestamp": "2025-04-15T17:05:39.684995"
     },
     {
-      "question": "How do the Total Amount of Loans and Leases, Net Income, Total Number of Employees, and Net Worth correlate with the Delinquent Credit card loans (Amount) 0-180 for each credit union, and what strategic insights can be derived from this correlation?",
-      "chunk": "Net_Worth (INTEGER): Net worth",
-      "cosine_distance": 0.42899999022483826,
+      "question": "How does the total net worth of credit unions compare to the total amount of loans and leases they provide, in terms of financial strength?",
+      "chunk": "Total_number_of_loans_and_leases (INTEGER): Total number of loans and leases offered by the credit union.",
+      "cosine_distance": 0.30399999022483826,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "Net_Worth"
+        "column_name": "Total_number_of_loans_and_leases"
       },
       "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Total_Employees",
-        "Deliquent Credit card loans (Amount) 0-180",
-        "Net_Income",
+        "Total_number_of_loans_and_leases",
         "Net_Worth"
       ],
-      "timestamp": "2025-04-15T01:25:26.419668"
+      "timestamp": "2025-04-15T17:05:32.568609"
     },
     {
-      "question": "How does the ratio of Net Worth to Total Assets vary based on the Total Number of Employees and the Total Amount of Loans and Leases held by each credit union, and what strategic implications can be drawn from this relationship?",
-      "chunk": "Net_Worth (INTEGER): Net worth",
-      "cosine_distance": 0.42899999022483826,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Net_Worth"
-      },
-      "source_columns": [
-        "TOTAL_ASSETS",
-        "Total_Number_of_loans_and_leases",
-        "Total_Employees",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:30.035769"
-    },
-    {
-      "question": "How does the ratio of Net Worth to Total Assets vary across credit unions based on their Net Income and Number of Members, and what implications does this ratio have on their financial stability?",
-      "chunk": "Net_Worth (INTEGER): Net worth",
-      "cosine_distance": 0.4300000071525574,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Net_Worth"
-      },
-      "source_columns": [
-        "NO_OF_MEMBERS",
-        "TOTAL_ASSETS",
-        "Net_Income",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:26.103257"
-    },
-    {
-      "question": "How do credit unions' interest income and expenses relate to their total net income?",
-      "chunk": "Net_Income (INTEGER): Net income",
-      "cosine_distance": 0.4309999942779541,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Net_Income"
-      },
-      "source_columns": [
-        "Interest_Expense",
-        "Net_Income",
-        "Interest_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:21.430171"
-    },
-    {
-      "question": "How do the total assets and net worth of credit unions vary across different quarters?",
-      "chunk": "Net_Worth (INTEGER): Net worth",
-      "cosine_distance": 0.4309999942779541,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Net_Worth"
-      },
-      "source_columns": [
-        "Quarter",
-        "TOTAL_ASSETS",
-        "Net_Worth"
-      ],
-      "timestamp": "2025-04-15T01:25:22.674135"
-    },
-    {
-      "question": "What trends can we observe in the total assets, net income, and number of employees of credit unions over different quarters?",
-      "chunk": "Quarter (TEXT): Quarter or time period",
-      "cosine_distance": 0.4309999942779541,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Quarter"
-      },
-      "source_columns": [
-        "Quarter",
-        "TOTAL_ASSETS",
-        "Total_Employees",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:23.067264"
-    },
-    {
-      "question": "Which credit unions have the highest ratio of Net Income to Total Assets, and how does this ratio correlate with the number of members and total amount of loans and leases they hold?",
-      "chunk": "CU_NAME (TEXT): Name of the credit union",
-      "cosine_distance": 0.4339999854564667,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "CU_NAME"
-      },
-      "source_columns": [
-        "NO_OF_MEMBERS",
-        "Total_amount_of_loans_and_leases",
-        "TOTAL_ASSETS",
-        "CU_NAME",
-        "Net_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:27.329364"
-    },
-    {
-      "question": "How do the total assets and interest income of credit unions correlate with their net worth?",
-      "chunk": "Interest_Income (INTEGER): Interest income",
-      "cosine_distance": 0.43700000643730164,
+      "question": "How do credit unions manage their interest income compared to their interest expenses?",
+      "chunk": "Interest_Income (INTEGER): Income generated from interest by the credit union.",
+      "cosine_distance": 0.3050000071525574,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
         "column_name": "Interest_Income"
       },
       "source_columns": [
-        "TOTAL_ASSETS",
-        "Interest_Income",
-        "Net_Worth"
+        "Interest_Expense",
+        "Interest_Income"
       ],
-      "timestamp": "2025-04-15T01:25:21.003888"
+      "timestamp": "2025-04-15T17:05:33.442909"
     },
     {
-      "question": "How do the total amount of shares and deposits correlate with the net income for each credit union?",
-      "chunk": "Net_Income (INTEGER): Net income",
-      "cosine_distance": 0.4429999887943268,
+      "question": "How does the ratio of Total Amount of Loans and Leases to Total Assets vary across different credit unions?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.3059999942779541,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "Net_Income"
+        "column_name": "TOTAL_ASSETS"
       },
       "source_columns": [
+        "TOTAL_ASSETS",
         "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
-        "Net_Income"
+        "Total_amount_of_loans_and_leases"
       ],
-      "timestamp": "2025-04-15T01:25:19.943827"
+      "timestamp": "2025-04-15T17:05:33.155154"
     },
     {
-      "question": "How does the ratio of interest income to interest expense vary across different credit unions, and how does this ratio impact their net income in relation to the total amount of loans and leases they hold?",
-      "chunk": "Interest_Income (INTEGER): Interest income",
-      "cosine_distance": 0.4429999887943268,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Interest_Income"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Interest_Expense",
-        "Net_Income",
-        "Interest_Income"
-      ],
-      "timestamp": "2025-04-15T01:25:24.463894"
-    },
-    {
-      "question": "How do the total assets and net income of credit unions correlate with the number of members they have?",
-      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members",
-      "cosine_distance": 0.4440000057220459,
+      "question": "What is the relationship between the total net worth and the total number of members in credit unions?",
+      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members associated with the credit union.",
+      "cosine_distance": 0.3109999895095825,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
@@ -1289,59 +629,775 @@
       },
       "source_columns": [
         "NO_OF_MEMBERS",
+        "Net_Worth"
+      ],
+      "timestamp": "2025-04-15T17:05:34.417627"
+    },
+    {
+      "question": "How does the total number of members impact the ratio of interest income to net income for each credit union, indicating the effectiveness of member engagement in generating financial returns?",
+      "chunk": "Interest_Income (INTEGER): Income generated from interest by the credit union.",
+      "cosine_distance": 0.31200000643730164,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Interest_Income"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:35.036194"
+    },
+    {
+      "question": "How does the total number of members impact the ratio of interest income to net income for each credit union, indicating the effectiveness of member engagement in generating financial returns?",
+      "chunk": "Interest_Income (INTEGER): Income generated from interest by the credit union.",
+      "cosine_distance": 0.31200000643730164,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Interest_Income"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:36.493380"
+    },
+    {
+      "question": "How does the ratio of Total Amount of Loans and Leases to Total Assets vary across different credit unions?",
+      "chunk": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS (REAL): Total amount of shares and deposits held by the credit union.",
+      "cosine_distance": 0.3160000145435333,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS"
+      },
+      "source_columns": [
         "TOTAL_ASSETS",
-        "Net_Income"
+        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
+        "Total_amount_of_loans_and_leases"
       ],
-      "timestamp": "2025-04-15T01:25:20.349084"
+      "timestamp": "2025-04-15T17:05:33.155171"
     },
     {
-      "question": "How many credit card loans are delinquent between 0-180 days for each credit union?",
-      "chunk": "CU_NUMBER (INTEGER): Unique identifier for credit union",
-      "cosine_distance": 0.44600000977516174,
+      "question": "How does the ratio of non-interest income to total net worth differ among credit unions with varying numbers of members?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.3179999887943268,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
-        "column_name": "CU_NUMBER"
+        "column_name": "Net_Worth"
       },
       "source_columns": [
-        "CU_NAME",
-        "CU_NUMBER",
-        "Deliquent Credit card loans (Amount) 0-180"
+        "NO_OF_MEMBERS",
+        "Net_Worth",
+        "Non_Interest_Income"
       ],
-      "timestamp": "2025-04-15T01:25:17.819482"
+      "timestamp": "2025-04-15T17:05:36.713873"
     },
     {
-      "question": "How do the total amount of loans and leases compare to the total assets for each credit union in each quarter?",
-      "chunk": "Quarter (TEXT): Quarter or time period",
-      "cosine_distance": 0.44600000977516174,
-      "metadata": {
-        "type": "column",
-        "table_name": "data_table",
-        "column_name": "Quarter"
-      },
-      "source_columns": [
-        "Total_amount_of_loans_and_leases",
-        "Quarter",
-        "TOTAL_ASSETS"
-      ],
-      "timestamp": "2025-04-15T01:25:19.654403"
-    },
-    {
-      "question": "How does the Total Amount of Loans and Leases, Net Income, and Total Number of Employees correlate with the Delinquent Credit card loans (Amount) 180+ for each credit union, and what strategic insights can be derived from this correlation?",
-      "chunk": "Total_Employees (INTEGER): Total number of employees",
-      "cosine_distance": 0.4490000009536743,
+      "question": "How do the number of new vehicle loans issued by credit unions compare to the total number of employees they have?",
+      "chunk": "Total_Employees (INTEGER): Total number of employees working for the credit union.",
+      "cosine_distance": 0.3190000057220459,
       "metadata": {
         "type": "column",
         "table_name": "data_table",
         "column_name": "Total_Employees"
       },
       "source_columns": [
-        "Total_amount_of_loans_and_leases",
         "Total_Employees",
+        "Number_of_new_Vehicle_loans"
+      ],
+      "timestamp": "2025-04-15T17:05:30.408284"
+    },
+    {
+      "question": "How do the total assets of credit unions correlate with their net income, in terms of financial performance?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.32100000977516174,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Income"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:31.078996"
+    },
+    {
+      "question": "How does the ratio of interest income to net income differ among credit unions based on the total number of members they have, considering the total amount of new vehicle loans issued?",
+      "chunk": "Interest_Income (INTEGER): Income generated from interest by the credit union.",
+      "cosine_distance": 0.32100000977516174,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Interest_Income"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Amount_of_new_vehicle_loans",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:38.772577"
+    },
+    {
+      "question": "How does the total number of members impact the ratio of interest income to net income for each credit union, indicating the effectiveness of member engagement in generating financial returns?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.32199999690055847,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Income"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:35.036272"
+    },
+    {
+      "question": "How does the total number of members impact the ratio of interest income to net income for each credit union, indicating the effectiveness of member engagement in generating financial returns?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.32199999690055847,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Income"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:36.493454"
+    },
+    {
+      "question": "How does the total net worth of credit unions correlate with the number of delinquent credit card loans for 180+ days, considering the total amount of shares and deposits they hold?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.3230000138282776,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "TOTAL_AMOUNT_OF_SHARES_AND_DEPOSITS",
+        "Net_Worth",
+        "Deliquent Credit card loans (Amount) 180+"
+      ],
+      "timestamp": "2025-04-15T17:05:37.576734"
+    },
+    {
+      "question": "How does the ratio of interest income to net income differ among credit unions based on the total number of members they have, considering the total amount of new vehicle loans issued?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.3269999921321869,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Income"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Amount_of_new_vehicle_loans",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:38.772597"
+    },
+    {
+      "question": "Which credit unions have the most effective operational efficiency by comparing the total number of employees to the net worth and total amount of loans and leases they provide?",
+      "chunk": "Total_amount_of_loans_and_leases (REAL): Total monetary value of loans and leases provided by the credit union.",
+      "cosine_distance": 0.33000001311302185,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Total_amount_of_loans_and_leases"
+      },
+      "source_columns": [
+        "Net_Worth",
+        "CU_NAME",
+        "Total_Employees",
+        "Total_amount_of_loans_and_leases"
+      ],
+      "timestamp": "2025-04-15T17:05:35.342563"
+    },
+    {
+      "question": "How does the ratio of non-interest income to total net worth vary among credit unions with different levels of delinquent credit card loans for 180+ days, indicating the impact of risk exposure on financial performance?",
+      "chunk": "Non_Interest_Income (INTEGER): Income generated by the credit union excluding interest-related income.",
+      "cosine_distance": 0.33000001311302185,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Non_Interest_Income"
+      },
+      "source_columns": [
+        "Deliquent Credit card loans (Amount) 180+",
+        "Net_Worth",
+        "Non_Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:39.075385"
+    },
+    {
+      "question": "How does the ratio of interest income to net income differ among credit unions based on the total amount of new vehicle loans issued?",
+      "chunk": "Interest_Income (INTEGER): Income generated from interest by the credit union.",
+      "cosine_distance": 0.3330000042915344,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Interest_Income"
+      },
+      "source_columns": [
+        "Amount_of_new_vehicle_loans",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:37.013863"
+    },
+    {
+      "question": "How does the ratio of total amount of loans and leases to total assets vary among credit unions with different levels of delinquent credit card loans for 180+ days, indicating the potential impact of credit risk on financial stability?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.33399999141693115,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_ASSETS"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "Deliquent Credit card loans (Amount) 180+",
+        "Total_amount_of_loans_and_leases"
+      ],
+      "timestamp": "2025-04-15T17:05:39.685013"
+    },
+    {
+      "question": "How does the total number of members impact the ratio of interest income to net income for each credit union, indicating the effectiveness of member engagement in generating financial returns?",
+      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members associated with the credit union.",
+      "cosine_distance": 0.33799999952316284,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "NO_OF_MEMBERS"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:35.036289"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of net income to total assets, considering their total number of members and the total amount of new vehicle loans issued?",
+      "chunk": "Number_of_new_Vehicle_loans (INTEGER): Number of new vehicle loans initiated by the credit union.",
+      "cosine_distance": 0.33799999952316284,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Number_of_new_Vehicle_loans"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Number_of_new_Vehicle_loans",
+        "NO_OF_MEMBERS",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:35.629749"
+    },
+    {
+      "question": "How does the total number of members impact the ratio of interest income to net income for each credit union, indicating the effectiveness of member engagement in generating financial returns?",
+      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members associated with the credit union.",
+      "cosine_distance": 0.33799999952316284,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "NO_OF_MEMBERS"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:36.493471"
+    },
+    {
+      "question": "How does the ratio of interest income to net income differ among credit unions based on the total amount of new vehicle loans issued?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.33799999952316284,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Income"
+      },
+      "source_columns": [
+        "Amount_of_new_vehicle_loans",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:37.013881"
+    },
+    {
+      "question": "How does the ratio of non-interest income to total net worth vary among credit unions with different levels of delinquent credit card loans for 180+ days, indicating the impact of risk exposure on financial performance?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.33799999952316284,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "Deliquent Credit card loans (Amount) 180+",
+        "Net_Worth",
+        "Non_Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:39.075399"
+    },
+    {
+      "question": "How do the total assets of credit unions correlate with the number of members they have?",
+      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members associated with the credit union.",
+      "cosine_distance": 0.3409999907016754,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "NO_OF_MEMBERS"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "TOTAL_ASSETS"
+      ],
+      "timestamp": "2025-04-15T17:05:32.233473"
+    },
+    {
+      "question": "How does the number of money market shares held by credit unions correlate with their net worth, in terms of financial stability?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.34700000286102295,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "Total_Number_of_money_market_shares",
+        "Net_Worth"
+      ],
+      "timestamp": "2025-04-15T17:05:31.695536"
+    },
+    {
+      "question": "Which credit unions have the highest operational efficiency by analyzing the ratio of total assets to total number of employees and total net worth?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.3490000069141388,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "Net_Worth",
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Total_Employees"
+      ],
+      "timestamp": "2025-04-15T17:05:37.935088"
+    },
+    {
+      "question": "How does the average amount of delinquent credit card loans (both 0-180 days and 180+ days) compare to the total net worth of credit unions, indicating their risk exposure and financial stability?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.35199999809265137,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "Deliquent Credit card loans (Amount) 0-180",
+        "Net_Worth",
+        "Deliquent Credit card loans (Amount) 180+"
+      ],
+      "timestamp": "2025-04-15T17:05:36.003530"
+    },
+    {
+      "question": "Which credit unions have the most effective operational efficiency by comparing the total number of employees to the net worth and total amount of loans and leases they provide?",
+      "chunk": "Total_Employees (INTEGER): Total number of employees working for the credit union.",
+      "cosine_distance": 0.3580000102519989,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Total_Employees"
+      },
+      "source_columns": [
+        "Net_Worth",
+        "CU_NAME",
+        "Total_Employees",
+        "Total_amount_of_loans_and_leases"
+      ],
+      "timestamp": "2025-04-15T17:05:35.342664"
+    },
+    {
+      "question": "Which credit unions have the highest operational efficiency by analyzing the ratio of total assets to total number of employees and total net worth?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.35899999737739563,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_ASSETS"
+      },
+      "source_columns": [
+        "Net_Worth",
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Total_Employees"
+      ],
+      "timestamp": "2025-04-15T17:05:37.935174"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of net income to total assets, considering their total number of members and the total amount of new vehicle loans issued?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.36000001430511475,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_ASSETS"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Number_of_new_Vehicle_loans",
+        "NO_OF_MEMBERS",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:35.629842"
+    },
+    {
+      "question": "How does the ratio of non-interest income to total net worth differ among credit unions with varying numbers of members?",
+      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members associated with the credit union.",
+      "cosine_distance": 0.3610000014305115,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "NO_OF_MEMBERS"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Net_Worth",
+        "Non_Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:36.713895"
+    },
+    {
+      "question": "Which credit unions have the most effective operational efficiency by comparing the total number of employees to the net worth and total amount of loans and leases they provide?",
+      "chunk": "Net_Worth (INTEGER): Net worth or total assets minus total liabilities of the credit union.",
+      "cosine_distance": 0.36399999260902405,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Worth"
+      },
+      "source_columns": [
+        "Net_Worth",
+        "CU_NAME",
+        "Total_Employees",
+        "Total_amount_of_loans_and_leases"
+      ],
+      "timestamp": "2025-04-15T17:05:35.342693"
+    },
+    {
+      "question": "Which credit unions exhibit the highest operational efficiency by analyzing the ratio of net income to total assets while also considering the total number of employees they have?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.37299999594688416,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_ASSETS"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Net_Income",
+        "Total_Employees"
+      ],
+      "timestamp": "2025-04-15T17:05:38.527344"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of net income to total assets while also having a lower number of delinquent credit card loans, indicating strong financial management and risk mitigation?",
+      "chunk": "TOTAL_ASSETS (REAL): Total assets of the credit union in monetary value.",
+      "cosine_distance": 0.37400001287460327,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "TOTAL_ASSETS"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
         "Net_Income",
         "Deliquent Credit card loans (Amount) 180+"
       ],
-      "timestamp": "2025-04-15T01:25:24.865829"
+      "timestamp": "2025-04-15T17:05:34.786587"
+    },
+    {
+      "question": "How does the ratio of interest income to net income differ among credit unions based on the total number of members they have, considering the total amount of new vehicle loans issued?",
+      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members associated with the credit union.",
+      "cosine_distance": 0.375,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "NO_OF_MEMBERS"
+      },
+      "source_columns": [
+        "NO_OF_MEMBERS",
+        "Amount_of_new_vehicle_loans",
+        "Net_Income",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:38.772616"
+    },
+    {
+      "question": "Which credit unions exhibit the highest operational efficiency by analyzing the ratio of net income to total assets while also considering the total number of employees they have?",
+      "chunk": "Total_Employees (INTEGER): Total number of employees working for the credit union.",
+      "cosine_distance": 0.37599998712539673,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Total_Employees"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Net_Income",
+        "Total_Employees"
+      ],
+      "timestamp": "2025-04-15T17:05:38.527417"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of net income to total assets, considering their total number of members and the total amount of new vehicle loans issued?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.37700000405311584,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Income"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Number_of_new_Vehicle_loans",
+        "NO_OF_MEMBERS",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:35.629861"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of interest income to net income while also having a lower number of delinquent credit card loans, indicating sound financial management and risk mitigation?",
+      "chunk": "Interest_Income (INTEGER): Income generated from interest by the credit union.",
+      "cosine_distance": 0.37700000405311584,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Interest_Income"
+      },
+      "source_columns": [
+        "Deliquent Credit card loans (Amount) 0-180",
+        "CU_NAME",
+        "Interest_Income",
+        "Deliquent Credit card loans (Amount) 180+",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:36.243269"
+    },
+    {
+      "question": "How do credit unions with a higher number of money market shares and lower interest expenses compared to interest income demonstrate better operational efficiency and financial stability?",
+      "chunk": "Interest_Expense (INTEGER): Expenses incurred due to interest payments by the credit union.",
+      "cosine_distance": 0.382999986410141,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Interest_Expense"
+      },
+      "source_columns": [
+        "Interest_Expense",
+        "Number_of_money_market_shares",
+        "Total_Employees",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:39.399880"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of interest income to net income while also having a lower number of delinquent credit card loans, indicating sound financial management and risk mitigation?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.3840000033378601,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Income"
+      },
+      "source_columns": [
+        "Deliquent Credit card loans (Amount) 0-180",
+        "CU_NAME",
+        "Interest_Income",
+        "Deliquent Credit card loans (Amount) 180+",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:36.243345"
+    },
+    {
+      "question": "Which credit unions have the highest operational efficiency by analyzing the ratio of total assets to total number of employees and total net worth?",
+      "chunk": "Total_Employees (INTEGER): Total number of employees working for the credit union.",
+      "cosine_distance": 0.3840000033378601,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Total_Employees"
+      },
+      "source_columns": [
+        "Net_Worth",
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Total_Employees"
+      ],
+      "timestamp": "2025-04-15T17:05:37.935190"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of net income to total assets while also having a lower number of delinquent credit card loans, indicating strong financial management and risk mitigation?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.38600000739097595,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Income"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Net_Income",
+        "Deliquent Credit card loans (Amount) 180+"
+      ],
+      "timestamp": "2025-04-15T17:05:34.786669"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of interest income to net income while also having a lower number of delinquent credit card loans, indicating sound financial management and risk mitigation?",
+      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans overdue by 180 days or more.",
+      "cosine_distance": 0.38600000739097595,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Deliquent Credit card loans (Amount) 180+"
+      },
+      "source_columns": [
+        "Deliquent Credit card loans (Amount) 0-180",
+        "CU_NAME",
+        "Interest_Income",
+        "Deliquent Credit card loans (Amount) 180+",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:36.243359"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of interest income to net income while also having a lower number of delinquent credit card loans, indicating sound financial management and risk mitigation?",
+      "chunk": "Deliquent Credit card loans (Amount) 0-180 (INTEGER): Amount of delinquent credit card loans overdue by 0-180 days.",
+      "cosine_distance": 0.3880000114440918,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Deliquent Credit card loans (Amount) 0-180"
+      },
+      "source_columns": [
+        "Deliquent Credit card loans (Amount) 0-180",
+        "CU_NAME",
+        "Interest_Income",
+        "Deliquent Credit card loans (Amount) 180+",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:36.243371"
+    },
+    {
+      "question": "Which credit unions exhibit the highest operational efficiency by analyzing the ratio of net income to total assets while also considering the total number of employees they have?",
+      "chunk": "Net_Income (INTEGER): Net income generated by the credit union.",
+      "cosine_distance": 0.39399999380111694,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Net_Income"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Net_Income",
+        "Total_Employees"
+      ],
+      "timestamp": "2025-04-15T17:05:38.527434"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of net income to total assets while also having a lower number of delinquent credit card loans, indicating strong financial management and risk mitigation?",
+      "chunk": "Deliquent Credit card loans (Amount) 180+ (INTEGER): Amount of delinquent credit card loans overdue by 180 days or more.",
+      "cosine_distance": 0.3970000147819519,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Deliquent Credit card loans (Amount) 180+"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Net_Income",
+        "Deliquent Credit card loans (Amount) 180+"
+      ],
+      "timestamp": "2025-04-15T17:05:34.786687"
+    },
+    {
+      "question": "How do credit unions with a higher number of money market shares and lower interest expenses compared to interest income demonstrate better operational efficiency and financial stability?",
+      "chunk": "Interest_Income (INTEGER): Income generated from interest by the credit union.",
+      "cosine_distance": 0.40700000524520874,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "Interest_Income"
+      },
+      "source_columns": [
+        "Interest_Expense",
+        "Number_of_money_market_shares",
+        "Total_Employees",
+        "Interest_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:39.399953"
+    },
+    {
+      "question": "Which credit unions have the most efficient ratio of net income to total assets, considering their total number of members and the total amount of new vehicle loans issued?",
+      "chunk": "NO_OF_MEMBERS (INTEGER): Number of members associated with the credit union.",
+      "cosine_distance": 0.41100001335144043,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "NO_OF_MEMBERS"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Number_of_new_Vehicle_loans",
+        "NO_OF_MEMBERS",
+        "Net_Income"
+      ],
+      "timestamp": "2025-04-15T17:05:35.629882"
+    },
+    {
+      "question": "Which credit unions exhibit the highest operational efficiency by analyzing the ratio of net income to total assets while also considering the total number of employees they have?",
+      "chunk": "CU_NAME (TEXT): Name of the credit union.",
+      "cosine_distance": 0.4410000145435333,
+      "metadata": {
+        "type": "column",
+        "table_name": "data_table",
+        "column_name": "CU_NAME"
+      },
+      "source_columns": [
+        "TOTAL_ASSETS",
+        "CU_NAME",
+        "Net_Income",
+        "Total_Employees"
+      ],
+      "timestamp": "2025-04-15T17:05:38.527452"
     }
   ]
 }

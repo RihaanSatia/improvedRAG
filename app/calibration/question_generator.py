@@ -93,7 +93,7 @@ def generate_question_set(
     if questions_per_category is None:
         config = load_config()
         questions_per_category = config['questions_per_category']
-    
+    print(questions_per_category)
     categories = [
         "single_column",
         "multi_column",
@@ -103,7 +103,7 @@ def generate_question_set(
     
     generated_questions = []
     previous_questions = []
-    
+    i = 1
     for category, num_questions in questions_per_category.items():
         for _ in range(num_questions):
             try:
@@ -114,6 +114,8 @@ def generate_question_set(
                     previous_questions=previous_questions,
                     target_category=category
                 )
+                print(f'Question number {i}')
+                i += 1
                 generated_questions.append(question)
                 previous_questions.append(question.question)
             except QuestionGenerationError as e:
