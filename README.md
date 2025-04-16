@@ -142,6 +142,12 @@ Let's say we have a database about cars and someone asks: "What's the average pr
        ❌ {"content": "Gas prices trending...", "cosine_distance": 0.35}
    ]
    ```
+## 🔍 RAG UI Screenshot
+
+This screenshot shows how the system highlights the most relevant match and provides confidence metrics based on conformal prediction.
+
+![RAG UI Screenshot](assets/ui-screenshot.png)
+
 
 ### Benefits Illustrated
 

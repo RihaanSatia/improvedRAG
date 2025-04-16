@@ -22,28 +22,22 @@ def render_sidebar():
             help="Higher values mean stricter matching criteria"
         )
         
-        show_metadata = st.checkbox(
-            "Show Metadata",
-            value=False,
-            help="Display additional information about the matching process"
-        )
-        
         st.markdown("---")
         st.markdown("""
             ### About
-            This RAG (Retrieval Augmented Generation) system uses:
-            - Conformal prediction for reliable retrieval
-            - Calibrated confidence scoring
-            - Advanced metadata matching
+            This RAG system enhances answer reliability through conformal prediction and confidence scoring.
+            
+            Error Rate (0-1):
+            - Lower (0.1): More permissive matching
+            - Higher (0.9): Stricter matching, fewer but more confident results
         """)
         
         st.markdown("---")
         st.markdown(
-            "[Repository](https://github.com/RihaanSatia/improvedRAG)",
-            unsafe_allow_html=True
-        )
+            "<a href='https://github.com/RihaanSatia/improvedRAG' target='_blank'><i class='fab fa-github' style='font-size: 24px; color: #333;'></i></a>",
+            unsafe_allow_html=True)
         
-        return error_rate, show_metadata
+        return error_rate
 
 def render_chat_messages(messages, show_metadata=False):
     """Render chat messages"""

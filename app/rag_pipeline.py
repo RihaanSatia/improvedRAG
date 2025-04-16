@@ -9,6 +9,7 @@ from app.calibration.storage import CalibrationQuestionStorage
 from app.calibration.calibration_data import CalibrationDataCollector
 from app.calibration.conformal import do_conformal_rag
 import streamlit as st
+from app.utils.pretty_printer import log_rag_response
 
 CSV_PATH = os.path.join("data", "Top10_CreditUnions1.csv")
 SQLITE_PATH = os.path.join("data", "creditunion.sqlite")
@@ -73,8 +74,8 @@ def run_rag_pipeline(
 
     # Get initial search results
     search_results = search_metadata_with_scores(user_question)
-    st.write("check these",search_results)
-    st.write("check these",calibration_records)
+    #Sst.write("check these",search_results)
+    #st.write("check these",calibration_records)
     # Apply conformal prediction
     conformal_results = do_conformal_rag(
         question=user_question,
@@ -89,5 +90,8 @@ def run_rag_pipeline(
         conformal_results['message'] = "No columns matched with sufficient confidence"
     else:
         conformal_results['status'] = "Success"
-        
+    
+    # Log the results to terminal
+    log_rag_response(conformal_results)
+    
     return conformal_results
