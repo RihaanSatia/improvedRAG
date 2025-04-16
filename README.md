@@ -1,4 +1,4 @@
-# Enhanced RAG System with Conformal Prediction 🤖
+# Enhanced RAG System with Conformal Prediction 
 
 A Retrieval-Augmented Generation (RAG) system enhanced with conformal prediction to improve answer reliability and reduce hallucinations.
 
@@ -152,6 +152,3 @@ Let's say we have a database about cars and someone asks: "What's the average pr
 3. **Transparency**: Each match comes with a confidence score you can verify
 4. **Reduced Hallucinations**: By filtering out uncertain matches, the LLM is less likely to make up information
 
-## 📝 License
-
-More instructions to follow;
