@@ -146,7 +146,7 @@ Let's say we have a database about cars and someone asks: "What's the average pr
 
 This screenshot shows how the system highlights the most relevant match and provides confidence metrics based on conformal prediction.
 
-![RAG UI Screenshot](assets/ui-screenshot.png)
+![RAG UI Screenshot](assets/ui_screenshot.png)
 
 
 ### Benefits Illustrated
